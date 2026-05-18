@@ -291,240 +291,6 @@
         }
       }
     },
-    "/v1/simulate-join-game": {
-      "post": {
-        "tags": [
-          "GameJoin"
-        ],
-        "summary": "Used by load test for making call to GS reserve and creating playsession upon successful reservation",
-        "produces": [
-          "application/json",
-          "text/json"
-        ],
-        "parameters": [
-          {
-            "in": "query",
-            "name": "placeId",
-            "required": true,
-            "type": "integer",
-            "format": "int64"
-          },
-          {
-            "in": "query",
-            "name": "placeVersion",
-            "required": true,
-            "type": "integer",
-            "format": "int32"
-          },
-          {
-            "in": "query",
-            "name": "gameCapacity",
-            "required": true,
-            "type": "integer",
-            "format": "int32"
-          },
-          {
-            "in": "query",
-            "name": "gameCode",
-            "required": true,
-            "type": "string",
-            "format": "uuid"
-          },
-          {
-            "in": "query",
-            "name": "universeId",
-            "required": true,
-            "type": "integer",
-            "format": "int64"
-          },
-          {
-            "in": "query",
-            "name": "PreferredPlayerIds",
-            "required": true,
-            "type": "array",
-            "items": {
-              "format": "int64",
-              "type": "integer"
-            },
-            "collectionFormat": "multi"
-          },
-          {
-            "in": "query",
-            "name": "Players",
-            "required": true,
-            "type": "array",
-            "items": {
-              "$ref": "#/definitions/Roblox.Games.Client.Player"
-            }
-          },
-          {
-            "in": "query",
-            "name": "ExperimentSettings",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "in": "query",
-            "name": "UserOrigin",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "in": "query",
-            "name": "GameJoinMetadata.JoinSource",
-            "required": true,
-            "type": "integer",
-            "format": "int64",
-            "enum": [
-              0,
-              1
-            ]
-          },
-          {
-            "in": "query",
-            "name": "GameJoinMetadata.RequestType",
-            "required": true,
-            "type": "integer",
-            "format": "int64",
-            "enum": [
-              0,
-              1,
-              2,
-              3,
-              4,
-              6
-            ]
-          },
-          {
-            "in": "query",
-            "name": "GameJoinMetadata.MatchmakingDecisionId",
-            "required": true,
-            "type": "string",
-            "format": "uuid"
-          },
-          {
-            "in": "query",
-            "name": "GameJoinMetadata.IsPlaceVoiceChatEnabled",
-            "required": true,
-            "type": "boolean"
-          },
-          {
-            "in": "query",
-            "name": "AllowedPlaceVersions",
-            "required": true,
-            "type": "array",
-            "items": {
-              "format": "int32",
-              "type": "integer"
-            },
-            "collectionFormat": "multi"
-          },
-          {
-            "in": "query",
-            "name": "IsPlaceVoiceChatEnabled",
-            "required": true,
-            "type": "boolean"
-          },
-          {
-            "in": "query",
-            "name": "FriendOfFriends",
-            "required": true,
-            "type": "array",
-            "items": {
-              "$ref": "#/definitions/Roblox.Games.Client.FriendOfFriend"
-            }
-          },
-          {
-            "in": "query",
-            "name": "MatchmakingFeatureData.FriendOfFriends",
-            "required": true,
-            "type": "array",
-            "items": {
-              "$ref": "#/definitions/Roblox.Games.Client.FriendOfFriend"
-            }
-          },
-          {
-            "in": "query",
-            "name": "MatchmakingFeatureData.FriendRecommendations",
-            "required": true,
-            "type": "array",
-            "items": {
-              "$ref": "#/definitions/Roblox.Games.Client.FriendRecommendation"
-            }
-          },
-          {
-            "in": "query",
-            "name": "gameId",
-            "type": "string",
-            "format": "uuid"
-          },
-          {
-            "in": "query",
-            "name": "preferredPlayerCapacity",
-            "type": "integer",
-            "format": "int32",
-            "default": 0
-          },
-          {
-            "in": "query",
-            "name": "matchmakingContextId",
-            "type": "integer",
-            "format": "int32",
-            "default": 1
-          },
-          {
-            "in": "query",
-            "name": "isCloudEdit",
-            "type": "boolean",
-            "default": false
-          },
-          {
-            "in": "query",
-            "name": "creatorId",
-            "type": "integer",
-            "format": "int64",
-            "default": 0
-          },
-          {
-            "in": "query",
-            "name": "creatorType",
-            "type": "string"
-          },
-          {
-            "in": "query",
-            "name": "vipOwnerId",
-            "type": "integer",
-            "format": "int64"
-          },
-          {
-            "in": "query",
-            "name": "isTeleport",
-            "type": "boolean",
-            "default": false
-          },
-          {
-            "in": "query",
-            "name": "queueAllowed",
-            "type": "boolean",
-            "default": false
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "schema": {
-              "type": "string"
-            }
-          }
-        },
-        "properties": {
-          "internal": true,
-          "metricIds": [
-            "GameJoin:SimulateJoinGame"
-          ]
-        }
-      }
-    },
     "/v1/team-create": {
       "post": {
         "tags": [
@@ -626,68 +392,6 @@
           ]
         }
       }
-    },
-    "/v1/teleport": {
-      "post": {
-        "tags": [
-          "Teleport"
-        ],
-        "summary": "Initiates a Teleport of a Group of Players.",
-        "consumes": [
-          "application/json",
-          "text/json"
-        ],
-        "parameters": [
-          {
-            "in": "header",
-            "name": "Roblox-Game-Id",
-            "description": "The System.Guid of the requesting game server.",
-            "required": true,
-            "type": "string",
-            "format": "uuid"
-          },
-          {
-            "in": "header",
-            "name": "Roblox-Place-Id",
-            "description": "The !:IPlace.Id of the requesting game server.",
-            "required": true,
-            "type": "integer",
-            "format": "int64"
-          },
-          {
-            "in": "body",
-            "name": "request",
-            "description": "The Roblox.GameJoin.Api.GroupTeleportRequest.",
-            "required": true,
-            "schema": {
-              "$ref": "#/definitions/Roblox.GameJoin.Api.GroupTeleportRequest"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          },
-          "400": {
-            "description": "1: The Source Place is invalid.\r\n2: The Source Universe is invalid.\r\n3: The Source Game is invalid.\r\n4: The Destination Place is invalid.\r\n5: The Destination Universe is invalid.\r\n6: The Destination Game is invalid.\r\n7: The requested Teleport Group is empty.\r\n10: A sepecified Member is not a valid User\r\n15: The Members were not defined or are invalid.\r\n16: A Member's GameInfo was not defined or are invalid.\r\n17: A duplicate Member has been specified in this Teleport Group."
-          },
-          "403": {
-            "description": "8: The requested Teleport Group is too large.\r\n9: The Source Place and the Destination Place are not in the same Universe.\r\n11: A specified Member cannot join the Destination Place"
-          },
-          "429": {
-            "description": "13: Too many requests to Teleport have been made."
-          },
-          "500": {
-            "description": "12: Failed to create a Group Teleport reservation."
-          }
-        },
-        "properties": {
-          "internal": true,
-          "metricIds": [
-            "Teleport:TeleportGroup"
-          ]
-        }
-      }
     }
   },
   "definitions": {
@@ -695,6 +399,15 @@
       "description": "Request model for game join.",
       "type": "object",
       "properties": {
+        "isoContext": {
+          "description": "Internal usage only field for some request context.",
+          "type": "string"
+        },
+        "eventId": {
+          "format": "uuid",
+          "description": "See \"Points of Interest\" project. A GUID that the developer has mapped to a special piece in their experience",
+          "type": "string"
+        },
         "gameJoinAttemptId": {
           "format": "uuid",
           "description": "The GameJoin Attempt Id for this game join request",
@@ -722,8 +435,21 @@
           "description": "Is this a teleport request",
           "type": "boolean"
         },
+        "isImmersiveAdsTeleport": {
+          "description": "Is this an Immersive Ads Teleport request.",
+          "type": "boolean"
+        },
         "channelName": {
           "description": "String representing channel name in RCC Channel 2.0.\r\nNote: Only internal users (email address ending in roblox.com and verified) can use this feature.\r\nFor other users, this field should be null, otherwise the request will be rejected.",
+          "type": "string"
+        },
+        "joinOrigin": {
+          "description": "The JoinOrigin of a gamejoin request, as propagated from the game client.",
+          "type": "string"
+        },
+        "partyId": {
+          "format": "uuid",
+          "description": "The ID of the player's current party, if any",
           "type": "string"
         }
       }
@@ -740,6 +466,9 @@
           "format": "int32",
           "description": "The integer status code",
           "type": "integer"
+        },
+        "statusData": {
+          "$ref": "#/definitions/Roblox.Web.GameJoin.StatusData"
         },
         "joinScriptUrl": {
           "description": "The URL to get the join 'script' from\r\nset when status == 2 (Joining)",
@@ -764,72 +493,6 @@
           "format": "int32",
           "description": "The player's current position in the join queue. Only used when trying to join full servers. 0 if not queued",
           "type": "integer"
-        }
-      }
-    },
-    "Roblox.GameJoin.Api.GameSession": {
-      "description": "Game session information that is passed to the client during game launch",
-      "type": "object",
-      "properties": {
-        "ClientIpAddress": {
-          "description": "The Member's IPV4 Address represented as a string",
-          "type": "string"
-        },
-        "PlatformTypeId": {
-          "format": "int32",
-          "description": "The Member's Roblox.Platform.Devices.IPlatform.PlatformTypeId",
-          "type": "integer"
-        },
-        "PolicyCountryId": {
-          "format": "int32",
-          "description": "The Member's Policy Country ID (if any)",
-          "type": "integer"
-        }
-      }
-    },
-    "Roblox.GameJoin.Api.GroupTeleportMember": {
-      "description": "A request model for a Teleport Group Member",
-      "type": "object",
-      "properties": {
-        "userId": {
-          "format": "int64",
-          "description": "The Member's !:IUser.Id",
-          "type": "integer"
-        },
-        "gameSession": {
-          "$ref": "#/definitions/Roblox.GameJoin.Api.GameSession"
-        }
-      }
-    },
-    "Roblox.GameJoin.Api.GroupTeleportRequest": {
-      "description": "A request model for !:TeleportController.TeleportGroup.",
-      "type": "object",
-      "properties": {
-        "teleportId": {
-          "format": "uuid",
-          "description": "The Id for the Group Teleport",
-          "type": "string"
-        },
-        "members": {
-          "description": "The Members that Source Server intends to Teleport as a Group",
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/Roblox.GameJoin.Api.GroupTeleportMember"
-          }
-        },
-        "placeId": {
-          "format": "int64",
-          "description": "The Target Place Id for the Group Teleport",
-          "type": "integer"
-        },
-        "gameId": {
-          "format": "uuid",
-          "description": "The Target Game Id for the Group Teleport",
-          "type": "string"
-        },
-        "channelName": {
-          "description": "String representing channel name in RCC Channel 2.0.\r\nNote: Only internal users (email address ending in roblox.com and verified) can use this feature.\r\nFor other users, this field should be null, otherweise the request will be rejected.",
-          "type": "string"
         }
       }
     },
@@ -872,8 +535,21 @@
           "description": "Is this a teleport request",
           "type": "boolean"
         },
+        "isImmersiveAdsTeleport": {
+          "description": "Is this an Immersive Ads Teleport request.",
+          "type": "boolean"
+        },
         "channelName": {
           "description": "String representing channel name in RCC Channel 2.0.\r\nNote: Only internal users (email address ending in roblox.com and verified) can use this feature.\r\nFor other users, this field should be null, otherwise the request will be rejected.",
+          "type": "string"
+        },
+        "joinOrigin": {
+          "description": "The JoinOrigin of a gamejoin request, as propagated from the game client.",
+          "type": "string"
+        },
+        "partyId": {
+          "format": "uuid",
+          "description": "The ID of the player's current party, if any",
           "type": "string"
         }
       }
@@ -914,8 +590,21 @@
           "description": "Is this a teleport request",
           "type": "boolean"
         },
+        "isImmersiveAdsTeleport": {
+          "description": "Is this an Immersive Ads Teleport request.",
+          "type": "boolean"
+        },
         "channelName": {
           "description": "String representing channel name in RCC Channel 2.0.\r\nNote: Only internal users (email address ending in roblox.com and verified) can use this feature.\r\nFor other users, this field should be null, otherwise the request will be rejected.",
+          "type": "string"
+        },
+        "joinOrigin": {
+          "description": "The JoinOrigin of a gamejoin request, as propagated from the game client.",
+          "type": "string"
+        },
+        "partyId": {
+          "format": "uuid",
+          "description": "The ID of the player's current party, if any",
           "type": "string"
         }
       }
@@ -959,8 +648,21 @@
           "description": "Is this a teleport request",
           "type": "boolean"
         },
+        "isImmersiveAdsTeleport": {
+          "description": "Is this an Immersive Ads Teleport request.",
+          "type": "boolean"
+        },
         "channelName": {
           "description": "String representing channel name in RCC Channel 2.0.\r\nNote: Only internal users (email address ending in roblox.com and verified) can use this feature.\r\nFor other users, this field should be null, otherwise the request will be rejected.",
+          "type": "string"
+        },
+        "joinOrigin": {
+          "description": "The JoinOrigin of a gamejoin request, as propagated from the game client.",
+          "type": "string"
+        },
+        "partyId": {
+          "format": "uuid",
+          "description": "The ID of the player's current party, if any",
           "type": "string"
         }
       }
@@ -1003,8 +705,21 @@
           "description": "Is this a teleport request",
           "type": "boolean"
         },
+        "isImmersiveAdsTeleport": {
+          "description": "Is this an Immersive Ads Teleport request.",
+          "type": "boolean"
+        },
         "channelName": {
           "description": "String representing channel name in RCC Channel 2.0.\r\nNote: Only internal users (email address ending in roblox.com and verified) can use this feature.\r\nFor other users, this field should be null, otherwise the request will be rejected.",
+          "type": "string"
+        },
+        "joinOrigin": {
+          "description": "The JoinOrigin of a gamejoin request, as propagated from the game client.",
+          "type": "string"
+        },
+        "partyId": {
+          "format": "uuid",
+          "description": "The ID of the player's current party, if any",
           "type": "string"
         }
       }
@@ -1045,8 +760,21 @@
           "description": "Is this a teleport request",
           "type": "boolean"
         },
+        "isImmersiveAdsTeleport": {
+          "description": "Is this an Immersive Ads Teleport request.",
+          "type": "boolean"
+        },
         "channelName": {
           "description": "String representing channel name in RCC Channel 2.0.\r\nNote: Only internal users (email address ending in roblox.com and verified) can use this feature.\r\nFor other users, this field should be null, otherwise the request will be rejected.",
+          "type": "string"
+        },
+        "joinOrigin": {
+          "description": "The JoinOrigin of a gamejoin request, as propagated from the game client.",
+          "type": "string"
+        },
+        "partyId": {
+          "format": "uuid",
+          "description": "The ID of the player's current party, if any",
           "type": "string"
         }
       }
@@ -1082,8 +810,21 @@
           "description": "Is this a teleport request",
           "type": "boolean"
         },
+        "isImmersiveAdsTeleport": {
+          "description": "Is this an Immersive Ads Teleport request.",
+          "type": "boolean"
+        },
         "channelName": {
           "description": "String representing channel name in RCC Channel 2.0.\r\nNote: Only internal users (email address ending in roblox.com and verified) can use this feature.\r\nFor other users, this field should be null, otherwise the request will be rejected.",
+          "type": "string"
+        },
+        "joinOrigin": {
+          "description": "The JoinOrigin of a gamejoin request, as propagated from the game client.",
+          "type": "string"
+        },
+        "partyId": {
+          "format": "uuid",
+          "description": "The ID of the player's current party, if any",
           "type": "string"
         }
       }
@@ -1106,112 +847,34 @@
         }
       }
     },
-    "Roblox.Games.Client.FriendOfFriend": {
+    "Roblox.Web.GameJoin.StatusData": {
       "type": "object",
       "properties": {
-        "Id": {
-          "format": "int64",
-          "type": "integer"
-        },
-        "CommonFriendCount": {
-          "format": "int32",
-          "type": "integer"
+        "creatorExperienceBan": {
+          "$ref": "#/definitions/Roblox.Web.GameJoin.StatusData.CreatorExperienceBanData"
         }
       }
     },
-    "Roblox.Games.Client.FriendRecommendation": {
+    "Roblox.Web.GameJoin.StatusData.CreatorExperienceBanData": {
       "type": "object",
       "properties": {
-        "FriendId": {
-          "format": "int64",
-          "type": "integer"
-        },
-        "RecommendationScore": {
-          "format": "double",
-          "type": "number"
-        }
-      }
-    },
-    "Roblox.Games.Client.Player": {
-      "type": "object",
-      "properties": {
-        "Id": {
-          "format": "int64",
-          "type": "integer"
-        },
-        "Age": {
-          "format": "double",
-          "type": "number"
-        },
-        "GeoPosition": {
-          "$ref": "#/definitions/Roblox.Games.Client.PlayerGeoposition"
-        },
-        "LanguageId": {
-          "format": "int32",
-          "type": "integer"
-        },
-        "SupportedLanguageId": {
-          "format": "int32",
-          "type": "integer"
-        },
-        "IpAddress": {
+        "startTime": {
+          "format": "date-time",
           "type": "string"
         },
-        "RoleSetIds": {
-          "type": "array",
-          "items": {
-            "format": "int32",
-            "type": "integer"
-          }
-        },
-        "BlockedPlayerIds": {
-          "type": "array",
-          "items": {
-            "format": "int64",
-            "type": "integer"
-          }
-        },
-        "PolicyCountryId": {
-          "format": "int32",
-          "type": "integer"
-        },
-        "IsUserVoiceChatEnabled": {
-          "type": "boolean"
-        },
-        "IsUserAvatarVideoEnabled": {
-          "type": "boolean"
-        },
-        "MatchmakingUserCommunitySamplingId": {
-          "format": "int32",
-          "type": "integer"
-        },
-        "Signals": {
-          "type": "object",
-          "additionalProperties": {
-            "format": "double",
-            "type": "number"
-          }
-        }
-      }
-    },
-    "Roblox.Games.Client.PlayerGeoposition": {
-      "type": "object",
-      "properties": {
-        "Latitude": {
-          "format": "double",
-          "type": "number"
-        },
-        "Longitude": {
-          "format": "double",
-          "type": "number"
-        },
-        "CountryId": {
-          "format": "int32",
-          "type": "integer"
-        },
-        "AutonomousSystemNumber": {
+        "durationSeconds": {
           "format": "int64",
           "type": "integer"
+        },
+        "displayReason": {
+          "type": "string"
+        },
+        "displayReasonTextFilterStatus": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "isInherited": {
+          "type": "boolean"
         }
       }
     },
@@ -1388,6 +1051,15 @@
           "type": "integer"
         },
         "PrivateServerID": {
+          "type": "string"
+        },
+        "EventID": {
+          "type": "string"
+        },
+        "EphemeralEarlyPubKey": {
+          "type": "string"
+        },
+        "PartyId": {
           "type": "string"
         }
       }
