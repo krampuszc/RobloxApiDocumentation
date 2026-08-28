@@ -10,17 +10,31 @@
   <style>
     ul { list-style-type: none; }
     body{
-    background-color:rgb(17, 18, 22) !important;
-    border-bottom:1px solid rgb(0, 0, 0);
-    color:#bdbebe;
+    background-color:#fafafa !important;
+    border-bottom:1px solid #d0d0d0;
+    color:#3b4151;
     font-family: HCo Gotham SSm,Helvetica Neue,Helvetica,Arial,Lucida Grande,sans-serif;
-    
+
 }
+    a{ color:#4990e2; }
+    small{ color:#6b7280; }
 
 
   </style>
   <body>
-    <h1>How to Use?</h1>
+    <h1>Unofficial Roblox Web API Documentation</h1>
+     <ol>
+      Unofficial Roblox Web API documentation. Except it isn't an insecure person and isn't hiding anything.<br>
+  Note: This was not posted by an official Roblox engineer. Also note that this is not *completely* done yet as I have other things to do at the moment, more updates will come though
+    </ol>
+    <h2>What's different?</h2>
+    <ol>
+      Internal APIs (previously undocumented to the public)<br>
+  Backend APIs (Only known to Roblox Web API Engineers. It was undocumented, and not even Roblox Employees / Roblox Staff Members had it or even knew about it)<br>
+  Some APIs seen here may deprecate and/or be sunsetted, so this is the reason why some endpoints don't actually do anything.<br>
+  index.html has the worse web design (im sorry im sorry)
+  </ol>
+    <h2>How to Use?</h2>
     <ol>
       <li>(Recommended for the main site)<br>
          Get the browser extension '<a href="https://chromewebstore.google.com/detail/tweak-mock-and-modify-htt/feahianecghpnipmhphmfgmpdodhcapi">tweak: mock and modify HTTP requests</a>' (If you're not on chrome go to <a href="https://tweak-extension.com/">this link</a> and click your browser icon. That's the official extension for the browser you're using. If it's not on there port it yourself or make sure to not download loggers)<br>
@@ -39,57 +53,114 @@
     
     <h2>Documentation Pages</h2>
     <ul>
-      <li><a href="abtesting/docs.html">A/B Testing</a></li>
-      <li><a href="accountinformation/docs.html">AccountInformation</a></li>
-      <li><a href="accountsettings/docs.html">AccountSettings</a></li>
-      <li><a href="adconfiguration/docs.html">AdConfiguration</a></li>
-      <li><a href="ads/docs.html">Ads</a></li>
-      <li><a href="api/docs.html">API (api.roblox.com)</a></li>
-      <li><a href="assetdelivery/docs.html">AssetDelivery</a></li>
+      <li><a href="abtesting/docs/index.html">A/B Testing</a></li>
+      <li><a href="accountinformation/docs/index.html">AccountInformation</a></li>
+      <li><a href="accountsettings/docs/index.html">AccountSettings</a></li>
+      <li><a href="adconfiguration/docs/index.html">AdConfiguration</a></li>
+      <li><a href="ads/docs/index.html">Ads</a></li>
+      <li><a href="api/docs/index.html">API (api.roblox.com)</a></li>
+      <li><a href="assetdelivery/docs/index.html">AssetDelivery</a></li>
       <li><a href="auth/docs/index.html">Authentication</a></li>
+      <li><a href="auth_Legacy/docs/index.html">Authentication (Legacy)</a></li>
       <li><a href="avatar/docs/index.html">Avatar</a></li>
-      <li><a href="badges/docs.html">Badges</a></li>
-      <li><a href="billing/docs.html">Billing</a></li>
-      <li><a href="catalog/docs.html">Catalog</a></li>
-      <li><a href="cdnproviders/docs.html">CDNProviders</a></li>
-      <li><a href="chat/docs.html">Chat</a></li>
+      <li><a href="badges/docs/index.html">Badges</a></li>
+      <li><a href="billing/docs/index.html">Billing</a></li>
+      <li><a href="catalog/docs/index.html">Catalog</a></li>
+      <li><a href="cdnproviders/docs/index.html">CDNProviders</a></li>
+      <li><a href="chat/docs/index.html">Chat</a></li>
       <li><a href="clientsettings/docs/index.html">ClientSettings</a></li>
-      <li><a href="contacts/docs.html">Contacts</a></li>
-      <li><a href="contentstore/docs.html">ContentStore</a></li>
-      <li><a href="develop/docs.html">Develop</a></li>
+      <li><a href="clientsettingscdn/docs/index.html">ClientSettingsCDN</a></li>
+      <li><a href="contacts/docs/index.html">Contacts</a></li>
+      <li><a href="contentstore/docs/index.html">ContentStore</a></li>
+      <li><a href="develop/docs/index.html">Develop</a></li>
       <li><a href="economy/docs/index.html">Economy</a></li>
-      <li><a href="engagementpayouts/docs.html">EngagementPayouts</a></li>
-      <li><a href="files_api/docs.html">Files_API</a></li>
-      <li><a href="followings/docs.html">Followings</a></li>
-      <li><a href="friends/docs.html">Friends</a></li>
-      <li><a href="gameinternationalization/docs.html">GameInternationalization</a></li>
-      <li><a href="games/docs.html">Games</a></li>
-      <li><a href="groups/docs.html">Groups</a></li>
-      <li><a href="groupsmoderation/docs.html">GroupsModeration</a></li>
-      <li><a href="inventory/docs.html">Inventory</a></li>
-      <li><a href="itemconfiguration/docs.html">ItemConfiguration</a></li>
-      <li><a href="locale/docs.html">Locale</a></li>
-      <li><a href="localizationtables/docs.html">LocalizationTables</a></li>
-      <li><a href="metrics/docs.html">Metrics</a></li>
-      <li><a href="notifications/docs.html">Notifications</a></li>
-      <li><a href="premiumfeatures/docs.html">PremiumFeatures</a></li>
-      <li><a href="presence/docs.html">Presence</a></li>
-      <li><a href="privatemessages/docs.html">PrivateMessages</a></li>
-      <li><a href="publish/docs.html">Publish</a></li>
-      <li><a href="share/docs.html">Share</a></li>
+      <li><a href="economy_LEGACY/docs/index.html">Economy (Legacy)</a></li>
+      <li><a href="economycreatorstats/docs/index.html">EconomyCreatorStats</a></li>
+      <li><a href="engagementpayouts/docs/index.html">EngagementPayouts</a></li>
+      <li><a href="ephemeralcounters_api/docs/index.html">EphemeralCounters_API</a></li>
+      <li><a href="files_api/docs/index.html">Files_API</a></li>
+      <li><a href="followings/docs/index.html">Followings</a></li>
+      <li><a href="friends/docs/index.html">Friends</a></li>
+      <li><a href="gameinternationalization/docs/index.html">GameInternationalization</a></li>
+      <li><a href="gamejoin/docs/index.html">GameJoin</a></li>
+      <li><a href="games/docs/index.html">Games</a></li>
+      <li><a href="groups/docs/index.html">Groups</a></li>
+      <li><a href="groups_Legacy/docs/index.html">Groups (Legacy)</a></li>
+      <li><a href="groupsmoderation/docs/index.html">GroupsModeration</a></li>
+      <li><a href="inventory/docs/index.html">Inventory</a></li>
+      <li><a href="itemconfiguration/docs/index.html">ItemConfiguration</a></li>
+      <li><a href="locale/docs/index.html">Locale</a></li>
+      <li><a href="localizationtables/docs/index.html">LocalizationTables</a></li>
+      <li><a href="metrics/docs/index.html">Metrics</a></li>
+      <li><a href="notifications/docs/index.html">Notifications</a></li>
+      <li><a href="premiumfeatures/docs/index.html">PremiumFeatures</a></li>
+      <li><a href="presence/docs/index.html">Presence</a></li>
+      <li><a href="privatemessages/docs/index.html">PrivateMessages</a></li>
+      <li><a href="publish/docs/index.html">Publish</a></li>
+      <li><a href="share/docs/index.html">Share</a></li>
       <li><a href="textfilter/docs/index.html">Textfilter</a></li>
-      <li><a href="thumbnails/docs.html">Thumbnails</a></li>
-      <li><a href="thumbnailsresizer/docs.html">ThumbnailsResizer</a></li>
+      <li><a href="thumbnails/docs/index.html">Thumbnails</a></li>
+      <li><a href="thumbnailsresizer/docs/index.html">ThumbnailsResizer</a></li>
       <li><a href="VersionCompatibility/docs/index.html">VersionCompatibility</a></li>
-      <li><a href="trades/docs.html">Trades</a></li>
-      <li><a href="translationroles/docs.html">TranslationRoles</a></li>
-      <li><a href="twostepverification/docs.html">TwoStepVerification</a></li>
-      <li><a href="usermoderation/docs.html">UserModeration</a></li>
-      <li><a href="users/docs.html">Users</a></li>
+      <li><a href="trades/docs/index.html">Trades</a></li>
+      <li><a href="translationroles/docs/index.html">TranslationRoles</a></li>
+      <li><a href="twostepverification/docs/index.html">TwoStepVerification</a></li>
+      <li><a href="usermoderation/docs/index.html">UserModeration</a></li>
+      <li><a href="users/docs/index.html">Users</a></li>
       <li><a href="voice/docs/index.html">Voice</a></li>
+      <li><a href="voice_Legacy/docs/index.html">Voice (Legacy)</a></li>
     </ul>
+
+    <h2>apis.roblox.com APIs (BEDEV2)</h2>
+    <p>Services routed through the apis.roblox.com gateway, reconstructed from the create.roblox.com (Creator Hub) client bundle. Paths, parameters, and request/response model fields are recovered from the generated clients; scalar field types, required flags, and endpoint descriptions are not available.</p>
+    <ul>
+      <li><a href="access-management-api/docs/index.html">access-management-api</a></li>
+      <li><a href="account-switcher/docs/index.html">account-switcher</a></li>
+      <li><a href="affiliate-links-api/docs/index.html">affiliate-links-api</a></li>
+      <li><a href="age-verification-service/docs/index.html">age-verification-service</a></li>
+      <li><a href="analytics-annotations-api/docs/index.html">analytics-annotations-api</a></li>
+      <li><a href="analytics-query-gateway/docs/index.html">analytics-query-gateway</a></li>
+      <li><a href="asset-permissions-api/docs/index.html">asset-permissions-api</a></li>
+      <li><a href="assets-upload-api/docs/index.html">assets/user-auth</a></li>
+      <li><a href="behavior-intervention/docs/index.html">behavior-intervention</a></li>
+      <li><a href="content-captures-api/docs/index.html">content-captures-api</a></li>
+      <li><a href="content-safety/docs/index.html">content-safety</a></li>
+      <li><a href="core-content/docs/index.html">core-content</a></li>
+      <li><a href="creator-home-api/docs/index.html">creator-home-api</a></li>
+      <li><a href="creator-inventory-api/docs/index.html">creator-inventory-api</a></li>
+      <li><a href="creator-notification-streams-api/docs/index.html">creator-notification-streams-api</a></li>
+      <li><a href="creator-resources-search-api/docs/index.html">creator-resources-search-api</a></li>
+      <li><a href="creator-settings/docs/index.html">creator-settings</a></li>
+      <li><a href="creator-updates-api/docs/index.html">creator-updates-api</a></li>
+      <li><a href="developer-analytics-aggregations/docs/index.html">developer-analytics-aggregations</a></li>
+      <li><a href="developer-products/docs/index.html">developer-products</a></li>
+      <li><a href="doc-site-feeds-api/docs/index.html">doc-site-feeds-api</a></li>
+      <li><a href="experience-guidelines-service/docs/index.html">experience-guidelines-service</a></li>
+      <li><a href="experience-releases/docs/index.html">experience-releases</a></li>
+      <li><a href="experience-subscriptions/docs/index.html">experience-subscriptions</a></li>
+      <li><a href="game-passes/docs/index.html">game-passes</a></li>
+      <li><a href="look-api/docs/index.html">look-api</a></li>
+      <li><a href="marketplace-items/docs/index.html">marketplace-items</a></li>
+      <li><a href="marketplace-publishing-requirements-api/docs/index.html">marketplace-publishing-requirements-api</a></li>
+      <li><a href="marketplace-sales/docs/index.html">marketplace-sales</a></li>
+      <li><a href="oauth/docs/index.html">oauth</a></li>
+      <li><a href="orgs/docs/index.html">orgs</a></li>
+      <li><a href="payments-bonus-service/docs/index.html">payments-bonus-service</a></li>
+      <li><a href="subscriptions/docs/index.html">subscriptions</a></li>
+      <li><a href="team-create-service/docs/index.html">team-create-service</a></li>
+      <li><a href="teamcreate/docs/index.html">teamcreate</a></li>
+      <li><a href="toolbox-service/docs/index.html">toolbox-service</a></li>
+      <li><a href="universe-analytics-insights/docs/index.html">universe-analytics-insights</a></li>
+      <li><a href="universes/docs/index.html">universes</a></li>
+      <li><a href="user-agreements/docs/index.html">user-agreements</a></li>
+      <li><a href="user-settings-api/docs/index.html">user-settings-api</a></li>
+      <li><a href="virtual-events/docs/index.html">virtual-events</a></li>
+    </ul>
+
     <h2>Github Repository</h2>
     <p>
+      <a href="https://github.com/GithubPagesStuff/Documentation">current repository.</a>
+      <br>
       <a href="https://github.com/GithubPagesStuff/Documentation">original repository of this project. Unrelated to this. It is probably abandoned.</a>
     </p>
     <h3>Credits</h3>
